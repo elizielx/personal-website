@@ -1,41 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Navigation from "../layouts/Navigation.astro";
-import Header from "../layouts/Header.astro";
-import Footer from "../layouts/Footer.astro";
-import ProjectsMarquee from "../components/projects-marquee.astro";
-
-const navigation = {
-    title: "yehezkieldio@proton.me",
-    links: [],
-};
-const header = {
-    title: "Yehezkiel Dio, Software Developer.",
-    description: "A software developer and sometimes software architect based in Balikpapan, Indonesia.",
-    contact: "yehezkieldio@proton.me",
-};
-const footer = {
-    copyright: "© 2023 Yehezkiel Dio. All rights reserved.",
-    links: [
-        {
-            title: "GitHub",
-            href: "https://github.com/elizielx",
-        },
-        {
-            title: "Instagram",
-            href: "https://www.instagram.com/yhezkiel.dio",
-        },
-        {
-            title: "LinkedIn",
-            href: "https://www.linkedin.com/in/yehezkieldio",
-        },
-    ],
-};
 ---
 
-<Layout title="Yehezkiel Dio">
-    <Navigation nav={navigation} />
-    <Header header={header} />
-    <ProjectsMarquee />
-    <Footer footer={footer} />
+<Layout
+    title="Yehezkiel Dio"
+    description="A software developer and sometimes software architect based at Balikpapan, Indonesia."
+>
+    <main>Hello, world!</main>
 </Layout>
