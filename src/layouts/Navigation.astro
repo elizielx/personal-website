@@ -1,0 +1,30 @@
+---
+import NavLink from "../components/nav-link.astro";
+
+interface Props {
+    nav: {
+        title: string;
+        links: {
+            title: string;
+            href: string;
+        }[];
+    };
+}
+
+const { nav } = Astro.props;
+---
+
+<div
+    class="mx-auto flex max-w-5xl items-center justify-center gap-20 overflow-hidden px-5 py-8 lg:justify-between xl:px-0"
+>
+    <a class="items-center gap-2 lg:flex" href=`mailto:${nav.title}`>
+        <h2 class="text-base font-light text-blue-charcoal-300 lg:block">
+            {nav.title}
+        </h2>
+    </a>
+    <nav class="z-10 flex max-w-max flex-1 items-center sm:justify-center lg:right-1">
+        <ul class="group flex flex-1 list-none items-center justify-center gap-1 space-x-1 [&>*:last-child]:ml-8">
+            {nav.links.map((link) => <NavLink title={link.title} link={link.href} />)}
+        </ul>
+    </nav>
+</div>
