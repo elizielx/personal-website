@@ -1,52 +1,31 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/header.astro";
-import TechnologyStack from "../components/technology-stack.astro";
-import { techData } from "../techstack-data";
 ---
 
 <Layout
     title="Yehezkiel Dio | Software Developer"
     description="A software developer and sometimes software architect based at Balikpapan, Indonesia."
 >
-    <Header />
-    <main class="relative flex flex-col h-auto items-start justify-center">
-        <article id="about-me" class="mx-auto lg:mx-32 mt-8 flex-col items-start justify-start px-5 py-8 xl:px-0">
-            <div class="mx-auto flex flex-col md:flex-row justify-between gap-4 overflow py-8 xl:px-0">
-                <div class="flex flex-col gap-6">
-                    <h2 class="text-3xl font-medium text-blue-charcoal-100 lg:text-5xl">About me.</h2>
-                    <div class="flex flex-col lg:flex-row justify-start mt-4">
-                        <div class="flex-1 mb-8 lg:mb-0">
-                            <h3 class="text-xl font-medium text-blue-charcoal-100 lg:text-xl">
-                                Yehezkiel Dio Sinolungan <span class="text-lg font-light">(@elizielx)</span>
-                            </h3>
-                            <h4 class="text-lg font-light text-blue-200">Software Developer</h4>
-                        </div>
-                        <div class="flex-1">
-                            <p class="text-sm font-normal text-blue-charcoal-200 lg:text-base lg:leading-6">
-                                Greetings! Hi again, I'm Yehezkiel Dio, or you can call me Dio. I'm a software developer
-                                with a passion for websites and web applications, and sometimes delving into
-                                architecture and infrastructure of a software. <span class="italic text-xs lg:text-sm"
-                                    >(i'm sort of a architect myself)</span
-                                >
-                            </p>
-                            <p class="text-sm mt-4 font-normal text-blue-charcoal-200 lg:text-base lg:leading-6">
-                                I'm currently an Informatics undergraduate student at Universitas Mulia, Balikpapan,
-                                Indonesia and also a freelance web developer.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex flex-col lg:flex-row justify-start mt-4">
-                        <div class="flex-1 mb-8 lg:mb-0">
-                            <h3 class="text-xl font-medium text-blue-charcoal-100 lg:text-xl">Technology Stack</h3>
-                            <h4 class="text-lg font-light text-blue-200">I've been using recently:</h4>
-                        </div>
-                        <div class="flex-1">
-                            <TechnologyStack stack={techData} />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </article>
-    </main>
+    <div
+        class="relative flex flex-col h-auto items-start justify-center bg-gradient-to-b from-slate-900 to-blue-charcoal-950"
+    >
+        <div class="mx-4 lg:mx-32 mt-8 flex-col items-start justify-start sm:px-2 py-8 xl:px-0">
+            <nav>
+                <h1 class="text-xl font-medium text-blue-charcoal-100">Yehezkiel Dio Sinolungan</h1>
+                <h2 class="text-lg font-light text-blue-charcoal-200">Software Developer</h2>
+            </nav>
+            <main class="mt-14 lg:max-w-3xl">
+                <p class="text-sm lg:text-base">
+                    Hello, and greetings! I'm Yehezkiel Dio Sinolungan or Dio for short. I'm a software developer with a
+                    passion for building things, particularly websites and web applications, but I'm also quite
+                    interested in software architecture, design and infrastructure.
+                </p>
+                <p class="mt-4 text-sm italic">(i'm sort of a software architect myself)</p>
+                <p class="text-sm lg:text-base mt-4">
+                    Currently, I'm a Informatics undergraduate student at Universitas Mulia, Balikpapan, Indonesia -
+                    while also working as a freelance web developer.
+                </p>
+            </main>
+        </div>
+    </div>
 </Layout>
