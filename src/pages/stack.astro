@@ -1,0 +1,120 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TechnologyStack from "../components/technology-stack.astro";
+
+const techData: { name: string; icon: string }[] = [
+    {
+        name: "TypeScript",
+        icon: "typescript",
+    },
+    {
+        name: "PHP",
+        icon: "php",
+    },
+    {
+        name: "Sass",
+        icon: "sass",
+    },
+    {
+        name: "TailwindCSS",
+        icon: "tailwindcss",
+    },
+    {
+        name: "Bulma",
+        icon: "bulma",
+    },
+    {
+        name: "Laravel",
+        icon: "laravel",
+    },
+    {
+        name: "Node.js",
+        icon: "node.js",
+    },
+    {
+        name: "Bun",
+        icon: "bun",
+    },
+    {
+        name: "Qwik",
+        icon: "qwik",
+    },
+    {
+        name: "React",
+        icon: "react",
+    },
+    {
+        name: "Vite",
+        icon: "vite",
+    },
+    {
+        name: "Next.js",
+        icon: "next.js",
+    },
+    {
+        name: "Fastify",
+        icon: "fastify",
+    },
+    {
+        name: "Nest.js",
+        icon: "nestjs",
+    },
+    {
+        name: "Astro",
+        icon: "astro",
+    },
+    {
+        name: "Nx",
+        icon: "nx",
+    },
+    {
+        name: "Docker",
+        icon: "docker",
+    },
+    {
+        name: "tRPC",
+        icon: "trpc",
+    },
+    {
+        name: "Drizzle",
+        icon: "drizzle",
+    },
+    {
+        name: "Prisma",
+        icon: "prisma",
+    },
+    {
+        name: "PostgreSQL",
+        icon: "postgresql",
+    },
+];
+---
+
+<Layout
+    title="Yehezkiel Dio | Software Developer"
+    description="A software developer and sometimes software architect based at Balikpapan, Indonesia."
+>
+    <div
+        class="relative flex flex-col h-auto items-start justify-center bg-gradient-to-b from-slate-900 to-blue-charcoal-950"
+    >
+        <div class="mx-4 lg:mx-32 mt-8 flex-col items-start justify-start sm:px-2 py-8 xl:px-0">
+            <nav>
+                <h1 class="text-xl font-medium text-blue-charcoal-100">Yehezkiel Dio Sinolungan</h1>
+                <h2 class="text-lg font-light text-blue-charcoal-200">Software Developer</h2>
+            </nav>
+            <main class="mt-12 max-w-full lg:max-w-2xl">
+                <p class="text-sm lg:text-base">Technology stack I've been recently using:</p>
+                <TechnologyStack stack={techData} />
+                <div class="flex items-center justify-between gap-1 mt-6">
+                    <div class="md:flex space-x-2">
+                        <a
+                            href="/"
+                            class="text-sm lg:text-base transition-colors hover:text-blue-charcoal-300 text-blue-charcoal-200 border-b border-b-blue-charcoal-200 hover:border-b-blue-charcoal-300 font-medium"
+                            >Back</a
+                        >
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</Layout>
